@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
@@ -27,66 +27,55 @@
 <meta name="twitter:description" content="关于Java类中数组对象创建的疑问 1234567891011121314151617181920212223242526public class Mix4&amp;#123;  int counter = 0;  public static void main(String[] args)&amp;#123;    int count = 0;    Mix4 [] m4a = new Mix4[20];">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/2019011315011142.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1FpbnFpblRheWxvcg==,size_16,color_FFFFFF,t_70">
   
-    <link rel="alternate" href="/atom.xml" title="Welcome to JANE&#39;s blog." type="application/atom+xml">
   
+    <link rel="icon" href="/favicon.ico">
   
-    <link rel="icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
-
 </head>
 </html>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Welcome to JANE&#39;s blog.</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">always learning...</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-Java" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/11/Java/" class="article-date">
-  <time datetime="2019-01-11T13:04:05.000Z" itemprop="datePublished">2019-01-11</time>
-</a>
+  
     
-  </div>
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-Java" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <header id="header" class="header">
+  <nav class="mobile-nav">
+    <h1 class="nickname">NickName</h1>
+    <ul class="mobile-nav-menu">
+      <label for="mobile-menu-toggle"><a>&#9776; Menu</a></label>
+      <input type="checkbox" id="mobile-menu-toggle">
+      <ul class="mobile-nav-link">
+        
+        <a href="/">Home</a>
+        
+        <a href="/archives">Archives</a>
+        
+        <a href="/about">About</a>
+        
+      </ul>
+    </ul>
+  </nav>
+	
+		<nav id="main-nav" class="main-nav nav-left">
+	
+	
+	  <a class="main-nav-link" href="/">Home</a>
+	
+	  <a class="main-nav-link" href="/archives">Archives</a>
+	
+	  <a class="main-nav-link" href="/about">About</a>
+	
+  </nav>
+</header>
+
+  <hr>
   <div class="article-inner">
     
+
     
       <header class="article-header">
         
@@ -98,7 +87,7 @@
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="article-entry typo" itemprop="articleBody">
       
         <h1 id="关于Java类中数组对象创建的疑问"><a href="#关于Java类中数组对象创建的疑问" class="headerlink" title="关于Java类中数组对象创建的疑问"></a>关于Java类中数组对象创建的疑问</h1><hr>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Mix4</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> counter = <span class="number">0</span>;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    Mix4 [] m4a = <span class="keyword">new</span> Mix4[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(x&lt;<span class="number">9</span>)&#123;</span><br><span class="line">      m4a[x] = <span class="keyword">new</span> Mix4();</span><br><span class="line">      m4a[x].counter = m4a[x].counter + <span class="number">1</span>;</span><br><span class="line">      count = count + <span class="number">1</span>;</span><br><span class="line">      count = count + m4a[x].maybeNew(x);</span><br><span class="line">      x = x + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  System.out.println(count+<span class="string">" "</span>+m4a[<span class="number">1</span>].counter);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maybeNew</span><span class="params">(<span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(index&lt;<span class="number">5</span>)&#123;</span><br><span class="line">        Mix4 m4 = <span class="keyword">new</span> Mix4();</span><br><span class="line">        m4.counter = m4.counter + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -165,148 +154,102 @@
 <p>如有错误地方，请大家指正。<br>共同学习，共同进步，期待大家的issue~</p>
 
       
+      
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/11/Java/" data-id="cjqut61cl0001uovnvqvr4ltw" class="article-share-link">Share</a>
-      
-      
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2019/01/11/Java/" class="article-date">
+  <time datetime="2019-01-11T13:04:05.000Z" itemprop="datePublished">2019-01-11</time>
+</a>
+
+        </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
 
+
+          </li>
+        
+        <hr>
+      </ul>
     </footer>
   </div>
   
     
-<nav id="article-nav">
+<nav id="article-nav" class="article-nav">
   
-    <a href="/2019/01/11/article/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/01/13/comment-test/" id="article-nav-newer" class="article-nav-link-wrap newer">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          New Start
+          comment_test
         
       </div>
     </a>
   
   
-    <a href="/2019/01/10/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/01/11/article/" id="article-nav-older" class="article-nav-link-wrap older">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">New Start</div>
     </a>
   
 </nav>
+
 
   
 </article>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li></ul>
-    </div>
-  </div>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/java/" style="font-size: 10px;">java</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
-    </div>
-  </div>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/01/13/comment-test/">comment_test</a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/11/article/">New Start</a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/11/Java/">Java</a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/10/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
-  
-</aside>
-        
+
+
+
+
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 Jane Qin<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr>
+      <div id="footerContent" class="footer-content">
+        <p>ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Fusce eget urna vitae velit <em>eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque</em> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Post</p>
+
+
+      </div>
+    </footer>
+
+      
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
     </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-<div id="container"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: '', // 可选。默认为 location.href  
-  owner: 'jane-qinj',             
-  repo: 'jane-qinj.github.io',                 
-  oauth: {
-    client_id: '31fe5c2932a1f33b11eb',          
-    client_secret: '351fae9b69f7e5c8efb1f7cb13a0b51ac45dde9e',  
-  },
-})
-gitment.render('container')
-</script>
-  </div>
-</body>
+  </body>
 </html>
