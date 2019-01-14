@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190114230700536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1FpbnFpblRheWxvcg==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190114230931722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1FpbnFpblRheWxvcg==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190114231609638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1FpbnFpblRheWxvcg==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-01-14T15:19:17.095Z">
+<meta property="og:updated_time" content="2019-01-14T15:28:50.099Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Girls_In_AI">
 <meta name="twitter:description" content="首先表达一下对这个项目发起者的感谢！ 项目链接我网站的搭建是参考了ZHANGYI的博客YZHANG 她同时也是项目的发起者 这篇文章将用来记录我在学习过程中遇到的问题及解决方案，希望能够帮助到和我遇到相同问题的人 machine_learning_diary/day-2issuses:  python3.5下载完成、 配置环境变量之后，进行到 下载python3.5版本的 Jupyter Note">
@@ -88,11 +88,12 @@
 <p>这篇文章将用来记录我在学习过程中遇到的问题及解决方案，希望能够帮助到和我遇到相同问题的人</p>
 <h3 id="machine-learning-diary-day-2"><a href="#machine-learning-diary-day-2" class="headerlink" title="machine_learning_diary/day-2"></a>machine_learning_diary/day-2</h3><p><strong>issuses:</strong></p>
 <ul>
-<li>python3.5下载完成、 配置环境变量之后，进行到 <em>下载python3.5版本的 Jupyter Notebook</em> 这一步 出现了错误，如下图：<br><img src="https://img-blog.csdnimg.cn/20190114230700536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1FpbnFpblRheWxvcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>socket.timeout: The read operation timed out<br>初步感觉是网络方面的问题， Google之后在Stack Overflow上找到了答案.<br><a href="https://stackoverflow.com/questions/43298872/how-to-solve-readtimeouterror-httpsconnectionpoolhost-pypi-python-org-port" target="_blank" rel="noopener">参考链接</a></li>
+<li>python3.5下载完成、 配置环境变量之后，进行到 <em>下载python3.5版本的 Jupyter Notebook</em> 这一步 出现了错误，如下图：<br><img src="https://img-blog.csdnimg.cn/20190114230700536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1FpbnFpblRheWxvcg==,size_16,color_FFFFFF,t_70" alt="error"><br>socket.timeout: The read operation timed out<br>初步感觉是网络方面的问题， Google之后在Stack Overflow上找到了答案.<br><a href="https://stackoverflow.com/questions/43298872/how-to-solve-readtimeouterror-httpsconnectionpoolhost-pypi-python-org-port" target="_blank" rel="noopener">参考链接</a></li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/20190114230931722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1FpbnFpblRheWxvcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>解决方案：</strong><br>依照上方提示， 打开Anaconda Prompt， 在命令行中输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --default-timeout=100 jupyter notebook</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://img-blog.csdnimg.cn/20190114230931722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1FpbnFpblRheWxvcg==,size_16,color_FFFFFF,t_70" alt=""><br><strong>解决方案：</strong><br>依照上方提示， 打开Anaconda Prompt， 在命令行中输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --default-timeout=100 jupyter notebook</span><br></pre></td></tr></table></figure></p>
 <p>成功解决问题</p>
-<p>另： 可以把环境变量看成是笔记本， python3.5看做是写笔记， 买好笔记本（搭建好环境）才可以写东西。<br><img src="https://img-blog.csdnimg.cn/20190114231609638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1FpbnFpblRheWxvcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这就是我在jupyter“笔记本”上写的笔记啦！ 哈，学习使我快落，Learning makes me happy(熬夜伤肝).</p>
+<p>另： 可以把环境变量看成是笔记本， python3.5看做是写笔记， 买好笔记本（搭建好环境）才可以写东西。<br><img src="https://img-blog.csdnimg.cn/20190114231609638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1FpbnFpblRheWxvcg==,size_16,color_FFFFFF,t_70" alt=""><br>这就是我在jupyter“笔记本”上写的笔记啦！ 哈，学习使我快落，Learning makes me happy(熬夜伤肝).</p>
+<p>Feeling: 做的过程中会遇到非常非常多的、一个接一个的问题， 这时候要调整心态， 发现一个说明有一个提高的点， 首先接受它， 无法处理的话先记录下来， 之后通过搜索或者提问， 一步一步解决， 最后！ 就可以写成笔记和经验， 内化成你自己的小宝藏！ （仓鼠屯瓜子）我要当最胖胖的仓鼠！</p>
 
       
       
