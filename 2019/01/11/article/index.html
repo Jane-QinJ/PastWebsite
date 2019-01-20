@@ -106,11 +106,11 @@
     
 <nav id="article-nav" class="article-nav">
   
-    <a href="/2019/01/13/github/" id="article-nav-newer" class="article-nav-link-wrap newer">
+    <a href="/2019/01/13/GIA_note/" id="article-nav-newer" class="article-nav-link-wrap newer">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Github相关操作
+          Girls_In_AI
         
       </div>
     </a>
@@ -127,6 +127,10 @@
   
 </article>
 
+
+  <section id="comments" class="comments">
+    <div id="gitment_container"></div>
+  </section>
 
 
 
@@ -150,6 +154,20 @@
 
       
 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment/style/default.min.css">
+<script src="https://cdn.jsdelivr.net/npm/gitment/dist/gitment.browser.min.js"></script>
+<script>
+  var gitment = new Gitment({
+    owner: 'Jane-QinJ',
+    repo: 'Jane-QinJ.github.io',
+    oauth: {
+      client_id: '31fe5c2932a1f33b11eb',
+      client_secret: '351fae9b69f7e5c8efb1f7cb13a0b51ac45dde9e'
+    }
+  })
+  gitment.render('gitment_container')
+</script>
 
 
 

@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Welcome to JANE&#39;s blog.">
 <meta property="og:description" content="Github上有许多非常优秀的开源项目， 可由于它的相关操作是全英文环境， 可能会限制许多人利用这个平台来学习知识， 所以打算写一篇博客简要介绍一下如何使用Github和其他人进行协作沟通 同时记录一些我遇到的实用功能。 其实它的大部分功能都在Github Help中被解释的很清楚， 我就是通过阅读Github Help中的问题与解决方法了解了它的工作流程。 大家如果目前英文方面不太熟练， 可以用">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-15T12:43:53.349Z">
+<meta property="og:updated_time" content="2019-01-17T09:05:17.732Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github相关操作">
 <meta name="twitter:description" content="Github上有许多非常优秀的开源项目， 可由于它的相关操作是全英文环境， 可能会限制许多人利用这个平台来学习知识， 所以打算写一篇博客简要介绍一下如何使用Github和其他人进行协作沟通 同时记录一些我遇到的实用功能。 其实它的大部分功能都在Github Help中被解释的很清楚， 我就是通过阅读Github Help中的问题与解决方法了解了它的工作流程。 大家如果目前英文方面不太熟练， 可以用">
@@ -87,6 +87,8 @@
 </li>
 <li><p><a href="https://opensource.guide/how-to-contribute/" target="_blank" rel="noopener">How to Contribute to Open Source</a><br>这篇介绍了如何在开源中贡献自己的力量</p>
 </li>
+<li><p><a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository" target="_blank" rel="noopener">Git帮助手册</a><br>git命令全面介绍， 可以选择中文版阅读(不过有些内容有丢失， 如果能看懂原版， 建议看原版)</p>
+</li>
 </ul>
 
       
@@ -119,19 +121,12 @@
     
 <nav id="article-nav" class="article-nav">
   
-    <a href="/2019/01/13/GIA_note/" id="article-nav-newer" class="article-nav-link-wrap newer">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Girls_In_AI
-        
-      </div>
-    </a>
+    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
   
   
-    <a href="/2019/01/11/article/" id="article-nav-older" class="article-nav-link-wrap older">
+    <a href="/2019/01/13/GIA_note/" id="article-nav-older" class="article-nav-link-wrap older">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">New Start</div>
+      <div class="article-nav-title">Girls_In_AI</div>
     </a>
   
 </nav>
@@ -140,6 +135,10 @@
   
 </article>
 
+
+  <section id="comments" class="comments">
+    <div id="gitment_container"></div>
+  </section>
 
 
 
@@ -163,6 +162,20 @@
 
       
 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment/style/default.min.css">
+<script src="https://cdn.jsdelivr.net/npm/gitment/dist/gitment.browser.min.js"></script>
+<script>
+  var gitment = new Gitment({
+    owner: 'Jane-QinJ',
+    repo: 'Jane-QinJ.github.io',
+    oauth: {
+      client_id: '31fe5c2932a1f33b11eb',
+      client_secret: '351fae9b69f7e5c8efb1f7cb13a0b51ac45dde9e'
+    }
+  })
+  gitment.render('gitment_container')
+</script>
 
 
 
