@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190115181332588.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190115181428658.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190115181515974.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1FpbnFpblRheWxvcg==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-01-15T12:51:31.759Z">
+<meta property="og:updated_time" content="2019-01-25T16:11:14.312Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Girls_In_AI">
 <meta name="twitter:description" content="首先表达一下对这个项目发起者的感谢！ 项目链接 我的个人网站janeqinblog.com的搭建是参考了ZHANGYI的博客YZHANG 她同时也是项目的发起者 这篇文章将用来记录我在学习过程中遇到的问题及解决方案，希望能够帮助到和我遇到相同问题的人 machine_learning_diary/day-2issuses:  python3.5下载完成、 配置环境变量之后，进行到 下载python">
@@ -139,6 +139,30 @@
 <p>这里我想要用python3.5版本的pip， 所以要把它的路径上移到最上面<br><img src="https://img-blog.csdnimg.cn/20190115181428658.png" alt=""></p>
 <p><img src="https://img-blog.csdnimg.cn/20190115181515974.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1FpbnFpblRheWxvcg==,size_16,color_FFFFFF,t_70" alt=""><br>其实我们要做的就是， 让计算机能够找到你的pip所在的地方， 也就是设置环境变量。</p>
 <p>推荐一个代码可视化的网站， 可以将你建立变量、赋值通过图像描绘。 <a href="http://pythontutor.com/" target="_blank" rel="noopener">点击这个链接</a></p>
+<h3 id="machine-learning-diary-day-4-7"><a href="#machine-learning-diary-day-4-7" class="headerlink" title="machine_learning_diary/day-4~7"></a>machine_learning_diary/day-4~7</h3><p>这几节内容是python语法介绍， 和java很类似, 所以合并在一起写一篇</p>
+<p>python中的</p>
+<ol>
+<li>逻辑运算符</li>
+</ol>
+<ul>
+<li><strong>与（&amp;&amp;）</strong>为<strong>and</strong></li>
+<li><strong>或(||)</strong>为<strong>or</strong></li>
+<li><strong>非(!)</strong>为<strong>not</strong><br>感觉更好记忆， 贴近英语单词意思</li>
+</ul>
+<ol start="2">
+<li>比较操作符</li>
+</ol>
+<ul>
+<li>x == y #x等于y</li>
+<li>x != y #x不等于y</li>
+<li>x &lt; y  #x小于y</li>
+<li>x &gt; y  #x大于y</li>
+<li>x &lt;= y #x小于等于y</li>
+<li>x &gt;= y #x大于等于y</li>
+<li>x <strong>is</strong> y #x是y  （python中特有)</li>
+<li>x <strong>is not</strong> y #x不是y</li>
+</ul>
+<p><em>布尔表达式返回的True和False, 是布尔类型的两个取值， 它们不是字符串string</em><br><strong>可以用type()来查询变量的类型</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">In: type(<span class="keyword">True</span>)</span><br><span class="line">Out: bool</span><br><span class="line"></span><br><span class="line">In: type(<span class="string">'True'</span>)</span><br><span class="line">Out: str</span><br></pre></td></tr></table></figure></p>
 
       
       
@@ -170,7 +194,14 @@
     
 <nav id="article-nav" class="article-nav">
   
-    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+    <a href="/2019/01/29/static_final/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Java中静态(static)变量、方法与实例变量、方法的规范
+        
+      </div>
+    </a>
   
   
     <a href="/2019/01/13/github/" id="article-nav-older" class="article-nav-link-wrap older">
