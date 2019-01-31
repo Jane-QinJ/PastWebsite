@@ -5,13 +5,13 @@
   
   <title>Java中静态(static)变量、方法与实例变量、方法的规范 | Welcome to JANE&#39;s blog.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Head First java第十章的静态变量与方法一节中， 规定了许多规则， 通过这几道有疑问的习题来加深印象。  能否在非静态方法中存取静态变量？1234567891011//在非静态方法中调用静态变量//结果：通过编译public class Foo&amp;#123;    static int x;    public void go()&amp;#123;	System.out.println(x +">
+  <meta name="description" content="Head First java第十章的静态变量与方法一节中， 规定了许多规则， 通过这几道有疑问的习题来加深印象。 已增加书籍连接（中英版）， 在文末附上链接， 大家按需提取， 请勿商用。  能否在非静态方法中存取静态变量？1234567891011//在非静态方法中调用静态变量//结果：通过编译public class Foo&amp;#123;    static int x;    public v">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java中静态(static)变量、方法与实例变量、方法的规范">
 <meta property="og:url" content="http://janeqinblog.com/2019/01/29/static_final/index.html">
 <meta property="og:site_name" content="Welcome to JANE&#39;s blog.">
-<meta property="og:description" content="Head First java第十章的静态变量与方法一节中， 规定了许多规则， 通过这几道有疑问的习题来加深印象。  能否在非静态方法中存取静态变量？1234567891011//在非静态方法中调用静态变量//结果：通过编译public class Foo&amp;#123;    static int x;    public void go()&amp;#123;	System.out.println(x +">
+<meta property="og:description" content="Head First java第十章的静态变量与方法一节中， 规定了许多规则， 通过这几道有疑问的习题来加深印象。 已增加书籍连接（中英版）， 在文末附上链接， 大家按需提取， 请勿商用。  能否在非静态方法中存取静态变量？1234567891011//在非静态方法中调用静态变量//结果：通过编译public class Foo&amp;#123;    static int x;    public v">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190129220155138.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190129221508213.png">
@@ -24,10 +24,10 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190129225228266.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/201901292304488.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190129231008281.png">
-<meta property="og:updated_time" content="2019-01-29T15:30:35.343Z">
+<meta property="og:updated_time" content="2019-01-30T04:09:32.487Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中静态(static)变量、方法与实例变量、方法的规范">
-<meta name="twitter:description" content="Head First java第十章的静态变量与方法一节中， 规定了许多规则， 通过这几道有疑问的习题来加深印象。  能否在非静态方法中存取静态变量？1234567891011//在非静态方法中调用静态变量//结果：通过编译public class Foo&amp;#123;    static int x;    public void go()&amp;#123;	System.out.println(x +">
+<meta name="twitter:description" content="Head First java第十章的静态变量与方法一节中， 规定了许多规则， 通过这几道有疑问的习题来加深印象。 已增加书籍连接（中英版）， 在文末附上链接， 大家按需提取， 请勿商用。  能否在非静态方法中存取静态变量？1234567891011//在非静态方法中调用静态变量//结果：通过编译public class Foo&amp;#123;    static int x;    public v">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190129220155138.png">
   
   
@@ -104,6 +104,7 @@
     <div class="article-entry typo" itemprop="articleBody">
       
         <p>Head First java第十章的静态变量与方法一节中， 规定了许多规则， 通过这几道有疑问的习题来加深印象。</p>
+<p>已增加书籍连接（中英版）， 在文末附上链接， 大家按需提取， 请勿商用。</p>
 <ol>
 <li>能否在非静态方法中存取静态变量？<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在非静态方法中调用静态变量</span></span><br><span class="line"><span class="comment">//结果：通过编译</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Foo</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> x;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">go</span><span class="params">()</span></span>&#123;</span><br><span class="line">	System.out.println(x + <span class="string">"success"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line"><span class="comment">//	Foo.go(); 静态方法不能引用非静态方法</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -164,11 +165,16 @@
 <li>静态 方法参数中的final变量能否被该方法存取<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Foo6</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">12</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">go</span><span class="params">(<span class="keyword">final</span> <span class="keyword">int</span> x)</span></span>&#123; </span><br><span class="line">        System.out.println(x);  </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123; <span class="comment">//静态方法可以调用静态方法</span></span><br><span class="line">    Foo6 foo = <span class="keyword">new</span> Foo6();</span><br><span class="line">    foo.go(<span class="number">5</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<p><img src="https://img-blog.csdnimg.cn/20190129231008281.png" alt=""><br>结果： 编译成功<br><strong>结论6：静态方法参数中的final变量能被该方法存取</strong></p>
 <ul>
 <li><strong>life和scope的差别</strong><br>在方法中，<br>作用域（scope）范围内的变量不受方法外部的实例变量影响（即使同名）。 这个被称为局部变量， 可以把参数也看作是一个局部变量， 它们跟随着方法 从被调用 到 执行完而被丢弃（调用栈弹出）</li>
 </ul>
 <p>局部变量的范围（scope）只限于声明它的方法之内。 当此方法调用别的方法时， 该变量还活着（In <strong>life’s</strong> perspective is <strong>alive</strong>），但不在目前的范围内（scope）。执行其他方法完毕返回时， 范围也就跟着回来。</p>
-<p>方法还有一个life(生命周期)， 只要变量的堆栈块还在堆栈上， 局部变量就算活着， 它会活到方法执行完毕为止。<br><img src="https://img-blog.csdnimg.cn/20190129231008281.png" alt=""><br>结果： 编译成功<br><strong>结论6：静态方法参数中的final变量能被该方法存取</strong></p>
+<p>方法还有一个life(生命周期)， 只要变量的堆栈块还在堆栈上， 局部变量就算活着， 它会活到方法执行完毕为止。</p>
+<p>当局部变量还活着（life层面)的时候， 它的状态会被保存。</p>
+<p>只要go()还在堆栈上， x变量就会保存它的值， 但x变量只能在go()方法待在栈顶时才能使用。 也就是说， 局部变量只能在声明它的方法 在执行中 才能被使用。</p>
+<p><a href="https://pan.baidu.com/s/1cHSUNy0OgffOrCd38UaDSw" target="_blank" rel="noopener">链接 中文版：</a><br>提取码：pi8j </p>
+<p><a href="https://pan.baidu.com/s/1-tSXcvp8Z_qEk7pUYo0ZOg" target="_blank" rel="noopener">链接 英文版</a><br>提取码：olvs </p>
 
       
       
@@ -210,7 +216,14 @@
     
 <nav id="article-nav" class="article-nav">
   
-    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+    <a href="/2019/01/31/git_basic/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Git的三个工作区和四种状态
+        
+      </div>
+    </a>
   
   
     <a href="/2019/01/13/GIA_note/" id="article-nav-older" class="article-nav-link-wrap older">
