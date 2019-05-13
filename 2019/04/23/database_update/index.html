@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Database basic operation | Welcome to JANE&#39;s blog.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="MySQL 的简介与安装  123456 登录：mysql -uroot -p之后输入密码Ctrl+C 强制退出  数据库和表的操作如何创建数据库create database test;这就代表创建了一个名为 test 的数据库show databases;查看当前所有的数据库drop database test;;删除数据库表操作use test;在操作表之前，首先我们要连接一个数据库出现">
+<meta name="keywords" content="database">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Database basic operation">
+<meta property="og:url" content="http://janeqinblog.com/2019/04/23/database_update/index.html">
+<meta property="og:site_name" content="Welcome to JANE&#39;s blog.">
+<meta property="og:description" content="MySQL 的简介与安装  123456 登录：mysql -uroot -p之后输入密码Ctrl+C 强制退出  数据库和表的操作如何创建数据库create database test;这就代表创建了一个名为 test 的数据库show databases;查看当前所有的数据库drop database test;;删除数据库表操作use test;在操作表之前，首先我们要连接一个数据库出现">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-10T04:12:36.699Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Database basic operation">
+<meta name="twitter:description" content="MySQL 的简介与安装  123456 登录：mysql -uroot -p之后输入密码Ctrl+C 强制退出  数据库和表的操作如何创建数据库create database test;这就代表创建了一个名为 test 的数据库show databases;查看当前所有的数据库drop database test;;删除数据库表操作use test;在操作表之前，首先我们要连接一个数据库出现">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+</html>
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-database_update" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+<header id="header" class="header">
+
+  <nav class="mobile-nav">
+    <h1 class="nickname">Jane Qin</h1>
+    <ul class="mobile-nav-menu">
+      <label for="mobile-menu-toggle"><a>&#9776; Menu</a></label>
+      <input type="checkbox" id="mobile-menu-toggle">
+      <ul class="mobile-nav-link">
+        
+        <a href="/">Home</a>
+        
+        <a href="/archives">Archives</a>
+        
+        <a href="/about">About</a>
+        
+      </ul>
+    </ul>
+  </nav>
+	
+		<nav id="main-nav" class="main-nav nav-left">
+	
+	
+	  <a class="main-nav-link" href="/">Home</a>
+	
+	  <a class="main-nav-link" href="/archives">Archives</a>
+	
+	  <a class="main-nav-link" href="/about">About</a>
+	
+  </nav>
+     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<span id="busuanzi_container_page_pv">
+  |页面阅读量:<span id="busuanzi_value_page_pv"></span>次
+</span>
+
+<span id="busuanzi_container_site_uv">
+  |本站访客数:<span id="busuanzi_value_site_uv"></span>人次|
+</span>
+</header>
+
+  <hr>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Database basic operation
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <ol>
+<li>MySQL 的简介与安装</li>
+</ol>
+<p>123456</p>
+<p>登录：mysql -uroot -p<br>之后输入密码<br>Ctrl+C 强制退出</p>
+<ol start="2">
+<li>数据库和表的操作<br>如何创建数据库<br>create database test;<br>这就代表创建了一个名为 test 的数据库<br>show databases;<br>查看当前所有的数据库<br>drop database test;;<br>删除数据库<br>表操作<br>use test;<br>在操作表之前，首先我们要连接一个数据库<br>出现 Database changed 字样表示成功，当我们忘记当前处于哪个数据库的时候，可以通过 select 来查看当前数据库</li>
+</ol>
+<p>如何建表<br>create table if not exists 表名(</p>
+<p>);</p>
+<p>这里是创建了一个成绩表，名为 exam_score，并设置了 id 为自增主键<br>show columns from exam_score<br>这个命令可以展示表的结构<br>跟数据库的操作一样，show tables 可以显示当前存在的表有哪些</p>
+<p>删除表<br>drop table exam_score;</p>
+<ol start="3">
+<li>插入和查找数据</li>
+</ol>
+<p>向表中插入数据格式：<br>insert into 表名 values 数据</p>
+<p>查看表中数据 ：<br>select * from exam_score;</p>
+<p>查找：<br>获取班级内学号前两位的同学：</p>
+<p>第一种方法用到了 order by 子句<br>通过字面意思也看的出来，根据…排序<br>我们可以将任意字段当作排序的条件，它默认是按照升序排列的<br>降序排列<br>select * from 表名 order by 字段名 desc;<br>升序的话，后面接 asc</p>
+<p>获取班级里叫做‘Li’的同学<br>要用到 where 子句</p>
+<p>提示：再出现select语句无法结束的情况，可以输入’\c，因为在之前的语句中，你可能没有闭合引号，所以MySQL把它作为正在收集的字符串的一部分，就无法结束。</p>
+<p>查询有条件的数据<br>如果班级中又来了一位名字叫‘Zhao’的同学，不过他的成绩不好，我要查询这个同学的数据该怎么办<br>首先我们插入一个数据<br>insert into exam_score values (5,’Zhao’,45.50);<br>然后 where 子句又派上用场了</p>
+<p>可以类比成条件判断中的 if 语句  where表示一种条件约束</p>
+<ol start="4">
+<li>修改和删除数据</li>
+</ol>
+<p>修改数据：<br>update 表名 set 要修改的数据项 where 条件</p>
+<p>也可以同时更改多个字段的数据，赋值语句中间用逗号(,)隔开就好了<br>还可以用 replace 来替换</p>
+<p>删除数据<br>delete from 表名 where 选取条件</p>
+<p>把表中数据全删除<br>delete from 表名;</p>
+<p>清空表数据和删除表的区别：<br>delete 清空操作只是数据被删除了，表还存在<br> drop 操作是删除了整个表，当表中存在数据时，要慎重使用这个方法</p>
+<ol start="5">
+<li>修改表结构</li>
+</ol>
+<p>增加表字段<br>我们的考试分数表中要添加一个‘其他分数’的字段，而且默认值是 10，该怎么操作呢<br>这就要用到 alter</p>
+<p>命令格式：<br>alter table 表名 add 字段名 数据类型 default 默认值;<br>修改表字段<br>校决定把这个其他分数改为评价，默认值不是数字了，变成了 normal，这该怎么办呢</p>
+<p>命名格式：<br>alter table 表名 change 旧字段 新字段 新数据类型 default 默认值;</p>
+<p>删除表中字段</p>
+<p>命名格式：<br>alter table 表名 drop column 字段名;</p>
+<p>修改表名</p>
+<p>命名规范：<br>rename table 旧表名 to 新表名;</p>
+<ol start="6">
+<li>表的连接<br>实际开发中，一张表往往是不足以解决我们的问题的，可能需要两张或多种表<br>我们来看看，如何将两张表关联起来<br>创建两个表，并插入数据<br>score表</li>
+</ol>
+<p>info表</p>
+<p>表的连接：<br>inner join<br>等值连接、内连接</p>
+<p>select score.id,score.name,info.phone from score inner join info on score.name = info.name;<br>select 表A.字段1,表A.字段2,表B.字段3 from 表A inner join 表B on 表A.字段2 = 表B.字段2;<br>这段命令就表示，我通过 inner join 连接了 score 和 info 两个表<br>读取了表 score 中的字段 id 和 name ，和在表 info 中对应的 phone 字段值<br>left join<br>左连接<br>读取left join 左边数据表所有选取的字段，即使右边数据表中没有对应的字段值<br>right join<br>右连接<br>读取right join 右边数据表中所有选取的字段，即使左边数据表中没有对应的字段值</p>
+<p>给 info 表添加两条数据，让你更容易看出左连接、右连接、等值连接的区别</p>
+<ol start="7">
+<li>索引<br>索引是一种单独的、物理的对数据库表中一列或多列的值进行排序的一种存储结构<br>本书会有目录，我们可以根据目录找到对应的章节<br>索引就好比数据表的目录</li>
+</ol>
+<p>添加索引</p>
+<p>格式<br>create index 索引名 on 表名(字段名);</p>
+<p>查看索引<br>格式<br>show index from score;<br>也可以在创建表的时候直接指定索引</p>
+<p>删除索引</p>
+<p>格式：<br>drop index 索引名 on 表名</p>
+<p>通过 alter 命令创建、删除索引</p>
+<p>alter table 表名 add 索引名(字段名)<br>alter table 表名 drop index 索引名<br>刚才我们创建的都是普通索引，还有一种是唯一索引<br>唯一索引<br>create unique index 索引名 on 表名(字段名);</p>
+<p>和普通索引的区别<br>顾名思义，二者的区别就是唯一索引的值必须唯一，但可以有空值<br>我们练习操作的数据库中数据都比较少，可能无法看出速度上的差异<br>但是像淘宝、京东等大型网站的数据库，其中数据可能是几亿条，通过索引便可以快速的找到所需数据</p>
+<ol start="8">
+<li>外键</li>
+</ol>
+<p>外键：<br>如果一个表的某个字段指向另一个表的主键，就称之为外键<br>被指向的表，称之为主表，也叫父表<br>那么另一个表就是从表，也叫子表</p>
+<p>如何设置和使用一个外键<br>我们通过这样一个例子来演示一下，两个表<br>一个是作者表 author_table<br>一个是文章表 article_table</p>
+<p>首先创建作者表，有作者的 id 和 name，如下图    </p>
+<p>然后创建文章表，注意了，看看我是如何设置了一个外键</p>
+<p>这里有文章的 id 和 title，还有作者的 id<br>黄色框出的部分表示将表中的 author_id 字段指向 author_table 的主键，即设置了一个外键<br>然后我们来添加一些数据</p>
+<p>然后我们看一下表中的数据</p>
+<p>那下面我们在向文章表中插入一个作者 id 为 5 的数据，看看能否成功添加</p>
+<p>失败了<br>错误信息告诉我们，主表中没有 id 为 5 的作者，添加一个作者 id 是 5 的文章数据自然是不可以的<br>也因为这个外键的约束，我们要想删除父表中 id 为 4 的数据也是不可以的<br>因为子表中有对应作者 id 为 4 的文章数据</p>
+<p>如何查看、删除一个表的外键</p>
+<p>命令格式：<br>show create table 表名;<br>通过这个命令我们可以看到表中存在的外键</p>
+<p>删除一个表的外键</p>
+<p>上图的命名删除了表中的外键约束<br>命令格式<br>alter table 表名 drop foreign key 外键名;<br>删除外键之后，又可以自由的添加、删除数据了<br>因为外键删除后不会对表中的数据有任何影响，这只是改变了对表的约束</p>
+<p>外键的作用还很多，我们可以通过外键给两表设置级联操作</p>
+<p>开始我们是在建表时就指定了外键<br>现在是在刚刚的删除操作后，用 alter 命令添加了一个外键</p>
+<p>on delete cascade<br>on update cascade<br>cascade<br> 表示关联操作，即如果父表中数据被删除或更新，子表中对应数据也会执行同样的操作<br>像这样的关键词还有两个<br>set null<br>表示子表数据不指向父表任何记录<br>restrict<br>表示拒绝主表的相关操作<br>当不加这两句话时，默认就是 restrict，这也就是为什么开始我们主表中数据无法删除的原因</p>
+<p>设置完级联操作后，删除作者表中一条数据，看看结果时什么样的</p>
+<p>删除了父表中的一条数据，子表中外键与之对应的数据也被删除了</p>
+
+      
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2019/04/23/database_update/" class="article-date">
+  <time datetime="2019-04-23T13:59:31.449Z" itemprop="datePublished">2019-04-23</time>
+</a>
+
+        </li>
+        
+          <li>
+            <span class="label">Category:</span>
+            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Database/">Database</a>
+  </div>
+
+
+          </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/database/">database</a></li></ul>
+
+
+          </li>
+        
+        <hr>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2019/04/24/book_diary_update/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/04/23/basic_cmd/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">basic cmd</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+  <section id="comments" class="comments">
+    <div id="gitment_container"></div>
+  </section>
+
+
+
+
+
+
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr>
+      <div id="footerContent" class="footer-content">
+        <p>Never Never Never give up.</p>
+
+
+      </div>
+    </footer>
+
+      
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment/style/default.min.css">
+<script src="https://cdn.jsdelivr.net/npm/gitment/dist/gitment.browser.min.js"></script>
+<script>
+  var gitment = new Gitment({
+    owner: 'Jane-QinJ',
+    repo: 'Jane-QinJ.github.io',
+    oauth: {
+      client_id: '31fe5c2932a1f33b11eb',
+      client_secret: '68e5b852c878d67bf4374b2d815de500c613cecf'
+    }
+  })
+  gitment.render('gitment_container')
+</script>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>
