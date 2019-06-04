@@ -5,18 +5,18 @@
   
   <title>Database basic operation | Welcome to JANE&#39;s blog.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MySQL 的简介与安装  123456 登录：mysql -uroot -p之后输入密码Ctrl+C 强制退出  数据库和表的操作如何创建数据库create database test;这就代表创建了一个名为 test 的数据库show databases;查看当前所有的数据库drop database test;;删除数据库表操作use test;在操作表之前，首先我们要连接一个数据库出现">
+  <meta name="description" content="MySQL 的简介与安装  123456 登录：mysql -uroot -p之后输入密码Ctrl+C 强制退出  数据库和表的操作  如何创建数据库 1create database test; 这就代表创建了一个名为 test 的数据库 1show databases; 查看当前所有的数据库 1drop database test;; 删除数据库 表操作use test;在操作表之前，首先我">
 <meta name="keywords" content="database">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Database basic operation">
 <meta property="og:url" content="http://janeqinblog.com/2019/04/23/database_update/index.html">
 <meta property="og:site_name" content="Welcome to JANE&#39;s blog.">
-<meta property="og:description" content="MySQL 的简介与安装  123456 登录：mysql -uroot -p之后输入密码Ctrl+C 强制退出  数据库和表的操作如何创建数据库create database test;这就代表创建了一个名为 test 的数据库show databases;查看当前所有的数据库drop database test;;删除数据库表操作use test;在操作表之前，首先我们要连接一个数据库出现">
+<meta property="og:description" content="MySQL 的简介与安装  123456 登录：mysql -uroot -p之后输入密码Ctrl+C 强制退出  数据库和表的操作  如何创建数据库 1create database test; 这就代表创建了一个名为 test 的数据库 1show databases; 查看当前所有的数据库 1drop database test;; 删除数据库 表操作use test;在操作表之前，首先我">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-10T04:12:36.699Z">
+<meta property="og:updated_time" content="2019-05-31T02:20:34.441Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Database basic operation">
-<meta name="twitter:description" content="MySQL 的简介与安装  123456 登录：mysql -uroot -p之后输入密码Ctrl+C 强制退出  数据库和表的操作如何创建数据库create database test;这就代表创建了一个名为 test 的数据库show databases;查看当前所有的数据库drop database test;;删除数据库表操作use test;在操作表之前，首先我们要连接一个数据库出现">
+<meta name="twitter:description" content="MySQL 的简介与安装  123456 登录：mysql -uroot -p之后输入密码Ctrl+C 强制退出  数据库和表的操作  如何创建数据库 1create database test; 这就代表创建了一个名为 test 的数据库 1show databases; 查看当前所有的数据库 1drop database test;; 删除数据库 表操作use test;在操作表之前，首先我">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -97,8 +97,16 @@
 <p>123456</p>
 <p>登录：mysql -uroot -p<br>之后输入密码<br>Ctrl+C 强制退出</p>
 <ol start="2">
-<li>数据库和表的操作<br>如何创建数据库<br>create database test;<br>这就代表创建了一个名为 test 的数据库<br>show databases;<br>查看当前所有的数据库<br>drop database test;;<br>删除数据库<br>表操作<br>use test;<br>在操作表之前，首先我们要连接一个数据库<br>出现 Database changed 字样表示成功，当我们忘记当前处于哪个数据库的时候，可以通过 select 来查看当前数据库</li>
+<li>数据库和表的操作</li>
 </ol>
+<p>如何创建数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database test;</span><br></pre></td></tr></table></figure>
+<p>这就代表创建了一个名为 test 的数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+<p>查看当前所有的数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database test;;</span><br></pre></td></tr></table></figure>
+<p>删除数据库</p>
+<p>表操作<br>use test;<br>在操作表之前，首先我们要连接一个数据库<br>出现 Database changed 字样表示成功，当我们忘记当前处于哪个数据库的时候，可以通过 select 来查看当前数据库</p>
 <p>如何建表<br>create table if not exists 表名(</p>
 <p>);</p>
 <p>这里是创建了一个成绩表，名为 exam_score，并设置了 id 为自增主键<br>show columns from exam_score<br>这个命令可以展示表的结构<br>跟数据库的操作一样，show tables 可以显示当前存在的表有哪些</p>
@@ -215,7 +223,7 @@
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          (no title)
+          Book and diary
         
       </div>
     </a>
