@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Welcome to JANE&#39;s blog.">
 <meta property="og:description" content="此篇文章用于记录日常遇到的软件安装问题，包括各种路径冲突、盘符扩充等等 This article used to record the problem that I faced in my daily development life.  How to enlarge the C partion space.如何扩充C盘空间？  重装系统后， 所有的软件都需要重新下载， 但是C盘分区时分的过小，导">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-06T11:29:23.265Z">
+<meta property="og:updated_time" content="2019-06-13T09:02:39.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Computer repair">
 <meta name="twitter:description" content="此篇文章用于记录日常遇到的软件安装问题，包括各种路径冲突、盘符扩充等等 This article used to record the problem that I faced in my daily development life.  How to enlarge the C partion space.如何扩充C盘空间？  重装系统后， 所有的软件都需要重新下载， 但是C盘分区时分的过小，导">
@@ -100,8 +100,13 @@
 <p>搜索一番后，找到一款很棒的分区软件<a href="http://www.partitionwizard.com/" target="_blank" rel="noopener">MiniTool Partition Wizard</a></p>
 <p>具体操作可参考<a href="https://blog.csdn.net/a1b2c3d4123456/article/details/49763883" target="_blank" rel="noopener">链接</a></p>
 <ol start="2">
-<li>MySQL reload.s<br><a href="https://blog.csdn.net/qq_42152399/article/details/80360817" target="_blank" rel="noopener">Navicat连接mysql8.0.1版本出现1251–Client does not support authentication protocol requested by server的解决</a></li>
+<li><p>MySQL reload.s<br><a href="https://blog.csdn.net/qq_42152399/article/details/80360817" target="_blank" rel="noopener">Navicat连接mysql8.0.1版本出现1251–Client does not support authentication protocol requested by server的解决</a></p>
+</li>
+<li><p>MYSQL <strong>The server time zone value ‘ÖÐ¹ú±ê×¼Ê±¼ä’ is unrecognized or represents more than one time zone</strong></p>
+</li>
 </ol>
+<p><strong>Solution</strong><br>时区问题,只需更改时区即可<br><a href="http://www.cnblogs.com/wangdianqian/p/9927406.html" target="_blank" rel="noopener">Reference</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br><span class="line">pw:123123</span><br><span class="line"></span><br><span class="line">set global time_zone = ‘+8:00‘; ##修改mysql全局时区为北京时间，即我们所在的东8区</span><br><span class="line">set time_zone = ‘+8:00‘; ##修改当前会话时区</span><br><span class="line">flush privileges; #立即生效</span><br></pre></td></tr></table></figure>
 
       
       
